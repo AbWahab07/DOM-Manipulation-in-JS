@@ -309,8 +309,38 @@ switch (true) {
 */ 
 // Falsy Values : undefined, null, '', 0, NaN
 // Truthy Values : NOT falsy values
+/*
 var height;
 height = 23; // Variable is not defined as 0 is a falsy value so fix the check
 height || height === 0 ? console.log( 'Variable is defined' ) : console.log( 'Variable is NOT defined' );
 height === '23' ? console.log( 'The == operator does type coercion' ) : console.log( 'The === is strict equality operator and does NOT do type coercion' );
- 
+*/
+
+
+
+/**************************************************
+ * 
+ * Coding Challenge
+ * 
+*/
+var avgJohn, avgMike;
+avgJohn = ( 89 + 120 + 103 ) / 3;
+avgMike = ( 116 + 94 + 123 ) / 3;
+/*
+if ( avgJohn > avgMike )
+  console.log( 'John team is winner with average ' + avgJohn);
+else if ( avgMike > avgJohn )
+  console.log( 'Mike team is winner with average ' + avgMike);
+else
+  console.log( 'Both teams have equal score so there is a draw', avgMike, avgJohn );
+*/
+var avgMarry = ( 97 + 134 + 105 ) / 3;
+console.log(avgMarry, avgMike, avgJohn );
+if ( avgJohn > avgMike && avgJohn > avgMarry)
+  console.log( 'John team is winner with average ' + avgJohn);
+else if ( avgMike > avgJohn &&  avgMike > avgMarry )
+  console.log( 'Mike team is winner with average ' + avgMike);
+else if ( avgMarry > avgJohn &&  avgMarry > avgMike )
+  console.log( 'Marry team is winner with average ' + avgMike);
+else 
+  console.log( 'All teams have equal score so there is a draw', avgMike, avgJohn, avgMarry );
