@@ -254,6 +254,7 @@ if ( age < 13 ) {
  * Ternary Operator and Switch Statements
  * 
  */
+/*
 var firstName = 'John';
 var age = 18;
 age >= 18 ? console.log(firstName + ' drinks beer') : console.log(firstName + ' drinks juice'); // For 14 -> John drinks juice
@@ -266,6 +267,7 @@ else
   var drink = 'juice';
 console.log( drink );
 */
+/*
 var job = 'designer';
 switch (job) {
   case 'teacher':
@@ -296,14 +298,19 @@ switch (true) {
     console.log( firstName + ' is a man' );
     break;
 }
-/*
-if ( age < 13 ) {
-  console.log( firstName + ' is a boy.' );
-} else if ( age >= 13 && age < 20 ) {
-  console.log( firstName + ' is a teenage.' );
-} else if ( age >= 20 && age < 30 ) {
-  console.log( firstName + ' is a young man.' );
-} else {
-  console.log( firstName + ' is a man' );
-}
 */
+
+
+
+/**************************************************
+ * 
+ * Truthy and Falsy Values and Equality Operators
+ * 
+*/ 
+// Falsy Values : undefined, null, '', 0, NaN
+// Truthy Values : NOT falsy values
+var height;
+height = 23; // Variable is not defined as 0 is a falsy value so fix the check
+height || height === 0 ? console.log( 'Variable is defined' ) : console.log( 'Variable is NOT defined' );
+height === '23' ? console.log( 'The == operator does type coercion' ) : console.log( 'The === is strict equality operator and does NOT do type coercion' );
+ 
