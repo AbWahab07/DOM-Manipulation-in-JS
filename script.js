@@ -1,7 +1,9 @@
 console.log( 'Hello World!!!' );
 
 /**************************************************
+ * 
  * Variables and Data Types
+ * 
 */
 /*
 var firstName = 'Abdul';
@@ -36,7 +38,9 @@ console.log( job ); // undefined
 
 
 /**************************************************
+ * 
  * Variable Mutation and Type Coercion
+ * 
 */
 
 /*
@@ -64,11 +68,13 @@ console.log( firstName + ' ' + lastName + ' is ' + age + ' years old ' + job + '
 
 
 /**************************************************
+ * 
  * Basic Operators
+ * 
 */
 // An operator is unary if it has a single operand. e.g unary negation ( single operand, reverses the sign)
 // An operator is binary if it has two operands. e.g binary subtraction ( two operands, subtracts).
-
+/*
 var currentYear, johnYear, markYear, johnAge, markAge;
 currentYear = 2018;
 johnAge = 28;
@@ -122,4 +128,64 @@ console.log( 2 ** 4 ); // 16 (2 * 2 * 2 * 2)
 // The operator works for non-integer numbers of a and b as well, for instance:
 console.log( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root, that's maths)
 console.log( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+*/
+
+
+
+/**************************************************
+ * 
+ * Operator Precedence
+ * 
+*/
+/*
+var currentYear, johnYear, johnAge, markAge, fullAge;
+currentYear = 2018;
+johnYear = 1989;
+fullAge = 18;
+// Multiple Operators
+var isFullAge = currentYear - johnYear >= fullAge;
+console.log( isFullAge ); // true
+// Math Operators
+johnAge = currentYear-johnYear;
+markAge = 35;
+var avg = ( johnAge + markAge ) / 2; // () is a Grouping operator.
+console.log( avg ); // 32
+// Multiple Assignments
+var x, y;
+x = y = ( 3 + 5 ) * 4 - 6;
+console.log(x, y); // 26
+// Increment/Decrement Operator
+console.log( x++ ); // 26
+console.log( y-- ); // 26
+console.log( x++ ); // 27
+console.log( y-- ); // 25
+// Modify-in-place Operator
+x *= 2;
+console.log(x); // 56
+*/
+
+
+
+/**************************************************
+ * 
+ * Coding Challenge 1
+ * 
+*/
+var johnMass, johnHeight, markMass, markHeight;
+johnMass = 92; // kg
+johnHeight = 1.95; // meters
+markMass = 78;
+markHeight = 1.69;
+
+var markBMI = markMass / (markHeight ** 2); 
+var johnBMI = johnMass / (johnHeight ** 2);
+
+console.log(markBMI, johnBMI); // 27.309968138370508 24.194608809993426
+
+var isMarkBMIHigh = markBMI > johnBMI;
+console.log(isMarkBMIHigh); // true
+
+console.log("Is Marks's BMI higher than John " + isMarkBMIHigh);
+
+
 
