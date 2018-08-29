@@ -1,10 +1,10 @@
-console.log( 'Hello World!!!' );
+console.log('Hello World!!!');
 
 /**************************************************
  * 
  * Variables and Data Types
  * 
-*/
+ */
 /*
 var firstName = 'Abdul';
 var lastName = 'Wahab';
@@ -41,7 +41,7 @@ console.log( job ); // undefined
  * 
  * Variable Mutation and Type Coercion
  * 
-*/
+ */
 
 /*
 // Type Coercion
@@ -71,7 +71,7 @@ console.log( firstName + ' ' + lastName + ' is ' + age + ' years old ' + job + '
  * 
  * Basic Operators
  * 
-*/
+ */
 // An operator is unary if it has a single operand. e.g unary negation ( single operand, reverses the sign)
 // An operator is binary if it has two operands. e.g binary subtraction ( two operands, subtracts).
 /*
@@ -136,7 +136,7 @@ console.log( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
  * 
  * Operator Precedence
  * 
-*/
+ */
 /*
 var currentYear, johnYear, johnAge, markAge, fullAge;
 currentYear = 2018;
@@ -170,7 +170,7 @@ console.log(x); // 56
  * 
  * Coding Challenge 1
  * 
-*/
+ */
 /*
 var johnMass, johnHeight, markMass, markHeight;
 johnMass = 92; // kg
@@ -195,7 +195,7 @@ console.log("Is Marks's BMI higher than John " + isMarkBMIHigh);
  * 
  * If/Else Statement
  * 
-*/
+ */
 /*
 var firstName = 'John';
 var maritalStatus = 'married';
@@ -231,7 +231,8 @@ if ( markBMI > johnBMI )
  * 
  * Boolean Logic
  * 
-*/
+ */
+/*
 // Operators are &&, ||, !, 
 var firstName = 'John';
 var age = 30;
@@ -244,3 +245,65 @@ if ( age < 13 ) {
 } else {
   console.log( firstName + ' is a man' );
 }
+*/
+
+
+
+/**************************************************
+ * 
+ * Ternary Operator and Switch Statements
+ * 
+ */
+var firstName = 'John';
+var age = 18;
+age >= 18 ? console.log(firstName + ' drinks beer') : console.log(firstName + ' drinks juice'); // For 14 -> John drinks juice
+var drink = age >= 18 ? 'beer' : 'juice'; // For 18, beer
+console.log(drink); // beer
+/*
+if ( age >= 18 )
+  var drink = 'beer';
+else
+  var drink = 'juice';
+console.log( drink );
+*/
+var job = 'designer';
+switch (job) {
+  case 'teacher':
+  case 'instructor':
+    console.log(firstName + ' teaches kids');
+    break;
+  case 'driver':
+    console.log(firstName + ' drives UBER');
+    break;
+  case 'designer':
+    console.log(firstName + ' designs websites');
+    break;
+  default:
+    console.log(firstName + ' does something else');
+    break;
+}
+switch (true) {
+  case age < 13:
+    console.log(firstName + ' is a boy.');
+    break;
+  case age >= 13 && age < 20:
+    console.log(firstName + ' is a teenage.');
+    break;
+  case age >= 20 && age < 30:
+    console.log(firstName + ' is a young man.');
+    break;
+  default:
+    console.log( firstName + ' is a man' );
+    break;
+}
+/*
+if ( age < 13 ) {
+  console.log( firstName + ' is a boy.' );
+} else if ( age >= 13 && age < 20 ) {
+  console.log( firstName + ' is a teenage.' );
+} else if ( age >= 20 && age < 30 ) {
+  console.log( firstName + ' is a young man.' );
+} else {
+  console.log( firstName + ' is a man' );
+}
+*/
