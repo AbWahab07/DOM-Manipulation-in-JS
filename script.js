@@ -232,3 +232,15 @@ if ( markBMI > johnBMI )
  * Boolean Logic
  * 
 */
+// Operators are &&, ||, !, 
+var firstName = 'John';
+var age = 30;
+if ( age < 13 ) {
+  console.log( firstName + ' is a boy.' );
+} else if ( age >= 13 && age < 20 ) {
+  console.log( firstName + ' is a teenage.' );
+} else if ( age >= 20 && age < 30 ) {
+  console.log( firstName + ' is a young man.' );
+} else {
+  console.log( firstName + ' is a man' );
+}
