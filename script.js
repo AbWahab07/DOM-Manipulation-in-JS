@@ -323,6 +323,7 @@ height === '23' ? console.log( 'The == operator does type coercion' ) : console.
  * Coding Challenge
  * 
 */
+/*
 var avgJohn, avgMike;
 avgJohn = ( 89 + 120 + 103 ) / 3;
 avgMike = ( 116 + 94 + 123 ) / 3;
@@ -334,6 +335,7 @@ else if ( avgMike > avgJohn )
 else
   console.log( 'Both teams have equal score so there is a draw', avgMike, avgJohn );
 */
+/*
 var avgMarry = ( 97 + 134 + 105 ) / 3;
 console.log(avgMarry, avgMike, avgJohn );
 if ( avgJohn > avgMike && avgJohn > avgMarry)
@@ -344,3 +346,30 @@ else if ( avgMarry > avgJohn &&  avgMarry > avgMike )
   console.log( 'Marry team is winner with average ' + avgMike);
 else 
   console.log( 'All teams have equal score so there is a draw', avgMike, avgJohn, avgMarry );
+*/
+
+
+
+/**************************************************
+ * 
+ * Functions 
+ * 
+*/
+// Function Definition
+function calculateAge ( birthYear ) {
+  return 2018 - birthYear;
+}
+var johnAge = calculateAge(1990);
+var mikeAge = calculateAge(1993); 
+var janeAge = calculateAge(1992); 
+console.log( johnAge, mikeAge, janeAge ); // 28 25 26
+
+function yearsUntilRetire ( birthYear, firstName ) {
+  var age = calculateAge( birthYear );
+  var retirement = 65 - age;
+  retirement > 0 ? console.log( firstName + ' will retire in ' + retirement + ' years' )
+  :console.log( firstName + ' is already retired' );
+}
+yearsUntilRetire( 1954, 'Abdul' ); // Abdul will retire in 1 years
+yearsUntilRetire( 1948, 'Mike' ); // Mike is already retired
+yearsUntilRetire ( 1969, 'Jane' ); // Jane will retire in 16 years
