@@ -355,6 +355,7 @@ else
  * Functions 
  * 
 */
+/*
 // Function Definition
 function calculateAge ( birthYear ) {
   return 2018 - birthYear;
@@ -373,3 +374,17 @@ function yearsUntilRetire ( birthYear, firstName ) {
 yearsUntilRetire( 1954, 'Abdul' ); // Abdul will retire in 1 years
 yearsUntilRetire( 1948, 'Mike' ); // Mike is already retired
 yearsUntilRetire ( 1969, 'Jane' ); // Jane will retire in 16 years
+*/
+
+
+
+/**************************************************
+ * 
+ * Function Statement and Expression
+ * 
+*/
+// Function declaration/statement : function whatDoYouDo ( job, firstName ) {}
+// Function expression
+var whatDoYouDo = function ( job, firstName ) {
+  
+}  
