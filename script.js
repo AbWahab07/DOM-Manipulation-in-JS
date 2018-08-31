@@ -386,5 +386,17 @@ yearsUntilRetire ( 1969, 'Jane' ); // Jane will retire in 16 years
 // Function declaration/statement : function whatDoYouDo ( job, firstName ) {}
 // Function expression
 var whatDoYouDo = function ( job, firstName ) {
-  
+  switch ( job ) {
+    case 'teacher':
+      return firstName + ' teaches code.'; 
+    case 'driver':
+      return firstName + ' drives uber.';
+    case 'designer':
+      return firstName + ' designs websites.';
+    default:
+      return firstName + ' does something else.';
+  }
 }  
+console.log( whatDoYouDo( 'teacher', 'John' ) ); // John teaches code.
+console.log( whatDoYouDo( 'driver', 'Mike' ) ); // Mike drives uber
+console.log( whatDoYouDo( 'plumber', 'Jane' ) ); // Jane does something else.
