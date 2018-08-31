@@ -385,6 +385,7 @@ yearsUntilRetire ( 1969, 'Jane' ); // Jane will retire in 16 years
 */
 // Function declaration/statement : function whatDoYouDo ( job, firstName ) {}
 // Function expression
+/*
 var whatDoYouDo = function ( job, firstName ) {
   switch ( job ) {
     case 'teacher':
@@ -400,3 +401,43 @@ var whatDoYouDo = function ( job, firstName ) {
 console.log( whatDoYouDo( 'teacher', 'John' ) ); // John teaches code.
 console.log( whatDoYouDo( 'driver', 'Mike' ) ); // Mike drives uber
 console.log( whatDoYouDo( 'plumber', 'Jane' ) ); // Jane does something else.
+*/
+
+
+
+/**************************************************
+ * 
+ * Arrays
+ * 
+*/
+// Arrays are zero indexed/based
+// Initialize Array
+var names = ['John', 'Marry', 'Jane'];
+var years = new Array(1990, 1989, 1995);
+console.log(names.length); // 3
+console.log(names[1]); // Marry
+// Mutate data in Array
+names[1] = 'Abdul';
+names[names.length] = 'Mark';
+console.log(names); // John, Abdul, Jane, Mark
+names[6] = 'Marry'; 
+console.log(names); // ["John", "Abdul", "Jane", "Mark", empty × 2, "Marry"]
+// Different Data Types 
+var john = ['John', 'Smith', 1990, 'teacher', false];
+// Array Methods
+
+// Add an element
+john.push('blue'); // adds in the end
+john.unshift('Mr.'); // adds in the start
+console.log(john); // ["Mr.", "John", "Smith", 1990, "teacher", false, "blue"]
+// Remove an element
+john.pop(); // removes from the end
+john.shift(); // removes from the start
+console.log(john); // ["John", "Smith", 1990, "teacher", false]
+
+// indexOf will return the position of element in the array
+console.log(john.indexOf(23)); // -1. It is used to test whether an element is present in the array or not 
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer';
+console.log(isDesigner); // John is NOT a designer
+
+
