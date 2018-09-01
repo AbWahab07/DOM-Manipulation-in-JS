@@ -410,6 +410,7 @@ console.log( whatDoYouDo( 'plumber', 'Jane' ) ); // Jane does something else.
  * Arrays
  * 
 */
+/*
 // Arrays are zero indexed/based
 // Initialize Array
 var names = ['John', 'Marry', 'Jane'];
@@ -439,5 +440,31 @@ console.log(john); // ["John", "Smith", 1990, "teacher", false]
 console.log(john.indexOf(23)); // -1. It is used to test whether an element is present in the array or not 
 var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer';
 console.log(isDesigner); // John is NOT a designer
+*/
 
 
+
+/**************************************************
+ * 
+ * Coding Challenge 
+ * 
+*/
+var tipsArray = [], totalBillPaid = [];
+var tip;
+function calculateTip (bill) {
+  if ( bill < 50 )
+    return tip = bill / 100 * 20;
+  else if( bill >= 50 && bill <= 200 )
+    return tip = bill / 100 * 15;
+  else 
+    return tip = bill / 100 * 10;
+}
+tipsArray [0] = calculateTip(124);
+tipsArray [1] = calculateTip(48);
+tipsArray [2] = calculateTip(268);
+console.log( tipsArray );
+totalBillPaid [0] = 124 + tipsArray[0];
+totalBillPaid [1] = 48 + tipsArray[1];
+totalBillPaid [2] = 268 + tipsArray[2];
+console.log( totalBillPaid );
+ 
