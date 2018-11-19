@@ -449,6 +449,7 @@ console.log(isDesigner); // John is NOT a designer
  * Coding Challenge 
  * 
 */
+/*
 var tipsArray = [], totalBillPaid = [];
 var tip;
 function calculateTip (bill) {
@@ -467,4 +468,156 @@ totalBillPaid [0] = 124 + tipsArray[0];
 totalBillPaid [1] = 48 + tipsArray[1];
 totalBillPaid [2] = 268 + tipsArray[2];
 console.log( totalBillPaid );
- 
+*/
+
+
+
+/**************************************************
+ * 
+ * Objects and Properties
+ * We can access a particular value using name/key which is not possible in Arrays as array is index based. 
+ * Order doesn't matters in Objects because we access a vlue using the key not an index whereas in Arrays order matters. 
+*/
+ // Object Literal Syntax
+ /*
+ var john = {
+  name: 'John',
+  birthYear: 1990,
+  family: ['Jane', 'Mark', 'Emily'],
+  job: 'teacher',
+  isMarried: false
+ };
+console.log( john.name ); //John -  DOT Notation
+console.log( john['job'] ); // teacher -  Bracket Notation 
+var x = 'birthYear';
+console.log( john[x] );
+// Object Mutation : Changing the value refers to mutation 
+john['job'] = 'driver';
+john.birthYear = 1992;
+console.log(john);
+
+// new Object Syntax
+var jane = new Object();
+jane.name = 'Jane';
+// jane[job] = 'designer'; error
+jane['job'] = 'designer';
+console.log(jane);
+*/
+
+
+
+/**************************************************
+ * 
+ * Objects and Methods
+ * Object has a special keyword 'this' which points to itself.
+ * 
+*/
+/*
+var john = {
+  name: 'John',
+  birthYear: 1990,
+  family: ['Jane', 'Mark', 'Emily'],
+  job: 'teacher',
+  isMarried: false,
+  calcAge: function () {
+    this.age = 2018 - this.birthYear;
+  }
+ };
+john.calcAge();
+console.log(john.age);
+*/
+
+
+
+/**************************************************
+ * 
+ * Coding Challenge 
+ * 
+*/
+/*
+var mark = {
+  name: 'Mark',
+  mass: 90,
+  height: 1.69,
+  calcBMI: function () {
+    this.BMI = (this.mass / (this.height * this.height) );
+    return this.BMI; 
+  }
+};
+var john = {
+  name: 'John',
+  mass: 80,
+  height: 1.69,
+  calcBMI: function () {
+    this.BMI = (this.mass / (this.height * this.height) );
+    return this.BMI; 
+  }
+};
+mark.calcBMI();
+john.calcBMI();
+if (john.calcBMI() === mark.calcBMI()) 
+  console.log('Both Mark and John have same BMI');
+else
+  john.BMI > mark.BMI ? console.log(`John ${john.BMI}`) : console.log(`Mark ${mark.BMI}`);
+*/
+
+
+
+/**************************************************
+ * 
+ * Loops and Iteration
+ * 
+ * 
+*/
+/*
+for (let i = 0; i < 20; i++) {
+  console.log(i);
+}
+
+var john = ['John', 'Smith', 1990, 'designer', false];
+for (let i = 0; i < john.length; i++) {
+  console.log(john[i]);
+}
+
+// While Loop 
+var i = 0;
+while (i < john.length) {
+  console.log(john[i]);
+  i++;
+}
+
+// break and continue statements
+var john = ['John', 'Smith', 1990, 'designer', false];
+for (let i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') continue;
+  console.log(john[i]);
+}
+
+for (let i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') break;
+  console.log(john[i]);
+}
+
+// Looping backwards
+for (let i = john.length - 1; i >= 0; i--) {
+  console.log(john[i]);
+}
+*/
+
+
+
+/**************************************************
+ * 
+ * Code Challenge 5
+ * 
+ * 
+*/
+
+
+
+/**************************************************
+ * 
+ * JS versions
+ * 
+ * 
+*/
